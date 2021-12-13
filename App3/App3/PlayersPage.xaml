@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels1="clr-namespace:App3.Models" x:DataType="viewmodels1:Player"  xmlns:local="clr-namespace:App3.ViewModels"
+             x:Class="App3.PlayersPage">
+    
+    <ListView x:Name="PlayersView" x:DataType="local:PlayersViewModel"  ItemsSource="{Binding Players}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell  x:DataType="viewmodels1:Player" Text="{Binding Texte}"
+                          Detail="{Binding Description}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate> 
+    </ListView>
+</ContentPage>
